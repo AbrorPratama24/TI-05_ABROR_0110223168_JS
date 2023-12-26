@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function image_picker(){
+            const list_gambar = ["bison.png", "burung.png", "hiu.png","singa.png","tikus.png"];
+            let pilihan = document.getElementById("option").value;
+            
+            if( pilihan == "bison"){
+                let select = list_gambar[0];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "burung"){
+                let select = list_gambar[1];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "hiu"){
+                let select = list_gambar[2];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "singa"){
+                let select = list_gambar[3];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+            if( pilihan == "tikus"){
+                let select = list_gambar[4];
+                document.getElementById("gambar").src = `images/${select}`;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Images Picker</h1>
+
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">Pilih Gambar</option>
+        <option value="bison">Bison</option>
+        <option value="singa">Singa</option>
+        <option value="tikus">Kucing</option>
+        <option value="burung">Burung</option>
+        <option value="hiu">Hiu</option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="500px" height="500px">
+    </div>
+
+</body>
+</html>
